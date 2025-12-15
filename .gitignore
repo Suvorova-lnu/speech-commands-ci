@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+
+# PyCharm / IDE
+.idea/
+*.iml
+
+# Data / cache (за бажанням)
+data/
+ci_data/
+
+speech_commands_right_stop_up_go/

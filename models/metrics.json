@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.795593635250918,
+  "latency_ms_avg": 1.3911835938529293,
+  "model_file_bytes": 102564,
+  "model_param_bytes": 95120,
+  "commands": [
+    "right",
+    "stop",
+    "up",
+    "go"
+  ]
+}

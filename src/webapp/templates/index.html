@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Speech Commands (right/stop/up/go)</title>
+  <style>
+    body { font-family: system-ui, Arial; margin: 24px; max-width: 900px; }
+    .card { padding: 16px; border: 1px solid #ddd; border-radius: 12px; margin-bottom: 16px; }
+    pre { background: #f6f6f6; padding: 12px; border-radius: 10px; overflow:auto; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Speech Commands: right / stop / up / go</h2>
+
+  <div class="card">
+    <h3>Глобальні метрики (з evaluate.py)</h3>
+    <pre id="global">{{ metrics | tojson(indent=2) }}</pre>
+  </div>
+
+  <div class="card">
+    <h3>Текстом (вибираєш клас → інференс на випадковому тестовому прикладі)</h3>
+    <select id="label">
+      {% for c in commands %}
+        <option value="{{c}}">{{c}}</option>
+      {% endfor %}
+    </select>
+    <button id="btnText">Run</button>
+  </div>
+
+  <div class="card">
+    <h3>Аудіо файл (WAV)</h3>
+    <input type="file" id="file" accept=".wav,audio/wav" />
+    <button id="btnFile">Predict</button>
+  </div>
+
+  <div class="card">
+    <h3>Мікрофон (запис у браузері → надсилаємо WAV)</h3>
+    <button id="btnRec">Start</button>
+    <button id="btnStop" disabled>Stop</button>
+  </div>
+
+  <div class="card">
+    <h3>Відповідь</h3>
+    <pre id="out">{}</pre>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

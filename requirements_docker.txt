@@ -1,0 +1,11 @@
+﻿--index-url https://pypi.org/simple
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.9.1
+torchaudio==2.9.1
+
+flask==3.1.2
+gunicorn==23.0.0
+numpy<2
+scikit-learn
+scipy

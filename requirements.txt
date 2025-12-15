@@ -1,0 +1,6 @@
+torch
+torchaudio
+flask
+gunicorn
+numpy<2
+scikit-learn
