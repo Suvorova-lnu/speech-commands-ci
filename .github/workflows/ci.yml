@@ -11,7 +11,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/speech-commands
+  IMAGE_NAME: ghcr.io/suvorova-lnu/speech-commands
 
 jobs:
   train:
